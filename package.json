@@ -1,0 +1,38 @@
+{
+  "name": "chuck-norris-jokes",
+  "version": "1.0.0",
+  "description": "chucknorriswebapp",
+  "main": "server.js",
+  "files": [
+    "glob/*.{js}"
+  ],
+  "scripts": {
+    "test": "\"echo \\\"Error, no test specified\\\" && exit 1\"",
+    "start": "cd client && yarn start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aibarzr/chucknorriswebapp.git"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.1",
+    "express": "^4.16.2",
+    "express-jwt": "^5.3.0",
+    "jwks-rsa": "^1.2.1",
+    "react-router": "^3.0.0",
+    "react-router-dom": "^4.2.2"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0"
+  },
+  "author": "Alex Ibarz Rodrigo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aibarzr/chucknorriswebapp/issues"
+  },
+  "homepage": "https://github.com/aibarzr/chucknorriswebapp#readme"
+}

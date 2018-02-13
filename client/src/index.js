@@ -2,16 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import CelebrityJokes from './components/CelebrityJokes';
 import FoodJokes from './components/FoodJokes';
-import { Router, Route, browserHistory } from 'react-router';
+import { BrowserRouter, Router, Route, Switch } from 'react-router-dom';
 
-const Root = () => {
-  return (
+/*ReactDOM.render((
+<BrowserRouter>
+  <div className="container">
+      <Route path="/" component={FoodJokes}/>
+      <Route path="/special" component={CelebrityJokes}/>
+  </div>
+</BrowserRouter>), document.getElementById('root'));*/
+const root = () => (
+  <BrowserRouter>
     <div className="container">
-      <Router history={browserHistory}>
+      <Switch>
         <Route path="/" component={FoodJokes}/>
         <Route path="/special" component={CelebrityJokes}/>
-      </Router>
+      </Switch>
     </div>
-  )
-}
-ReactDOM.render(<Root />, document.getElementById('root'));
+  </BrowserRouter>
+);
